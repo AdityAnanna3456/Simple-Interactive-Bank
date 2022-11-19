@@ -13,6 +13,10 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     const currentBalanceTotal = previousBalanceTotal + newDepositAmount;
     balanceTotalElement.innerText = currentBalanceTotal;
     depositField.value = '';
+    if (value<0(newDepositAmount)) {
+        alert('Please provide a valid number');
+        return;
+    }
     if (isNaN(newDepositAmount)) {
         alert('Please provide a valid number');
         return;
